@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateTenant">
+
+
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#57bc90"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tenant_image"
+        android:layout_width="109dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/add_user" />
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="@string/tenant_first_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/tenant_image"
+        app:layout_constraintStart_toStartOf="@+id/tenant_image"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_image" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/tenant_last_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/first_name"
+        app:layout_constraintStart_toStartOf="@+id/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+    <EditText
+        android:id="@+id/email_no"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/tenant_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/last_name"
+        app:layout_constraintStart_toStartOf="@+id/last_name"
+        app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+    <EditText
+        android:id="@+id/phone_no"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/tenant_phone_no"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/email_no"
+        app:layout_constraintStart_toStartOf="@+id/email_no"
+        app:layout_constraintTop_toBottomOf="@+id/email_no" />
+
+
+    <Button
+        android:id="@+id/update_tenant_details"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/update_tenant_button"
+        android:textColor="#000"
+        android:textSize="12sp"
+        app:backgroundTint="#57bc90"
+        app:layout_constraintEnd_toEndOf="@+id/pending_dues"
+        app:layout_constraintTop_toBottomOf="@+id/pending_dues" />
+
+    <EditText
+        android:id="@+id/pending_dues"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/enter_tenant_pending_dues"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/phone_no"
+        app:layout_constraintStart_toStartOf="@+id/phone_no"
+        app:layout_constraintTop_toBottomOf="@+id/phone_no" />
+
+    <Button
+        android:id="@+id/delete_tenant"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#57bc90"
+        android:text="@string/delete_tenant"
+        android:textColor="#000"
+        app:layout_constraintEnd_toStartOf="@+id/update_tenant_details"
+        app:layout_constraintStart_toStartOf="@+id/pending_dues"
+        app:layout_constraintTop_toBottomOf="@+id/pending_dues" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

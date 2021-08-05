@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayTenantDetails">
+
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:background="#57BC90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tenant_image"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/add_user"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tenant_name"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="8dp"
+        android:text="@string/tenant_name"
+        app:layout_constraintEnd_toStartOf="@+id/fill_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_image" />
+
+    <TextView
+        android:id="@+id/fill_name"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tenant_image"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_image" />
+
+    <TextView
+        android:id="@+id/tenant_email"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/tenant_email"
+        app:layout_constraintEnd_toStartOf="@+id/fill_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tenant_name"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_name" />
+
+    <TextView
+        android:id="@+id/fill_email"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/fill_name"
+        app:layout_constraintTop_toBottomOf="@+id/fill_name" />
+
+    <TextView
+        android:id="@+id/tenant_phone"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:text="@string/tenant_phone_no"
+        app:layout_constraintEnd_toStartOf="@+id/fill_phone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tenant_email"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_email" />
+
+    <TextView
+        android:id="@+id/fill_phone"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/fill_email"
+        app:layout_constraintTop_toBottomOf="@+id/fill_email" />
+
+    <TextView
+        android:id="@+id/tenant_pending_dues"
+        android:layout_width="123dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:text="@string/tenant_pending_dues"
+        app:layout_constraintEnd_toEndOf="@+id/tenant_phone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tenant_phone"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_phone" />
+
+    <TextView
+        android:id="@+id/fill_pending_dues"
+        android:layout_width="123dp"
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/fill_phone"
+        app:layout_constraintTop_toBottomOf="@+id/fill_phone" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="67dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#fff"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sms"
+        app:layout_constraintEnd_toEndOf="@+id/fill_phone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/fill_pending_dues"
+        app:layout_constraintTop_toBottomOf="@+id/fill_phone" />
+
+    <Button
+        android:id="@+id/update_tenant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#57BC90"
+        android:text="@string/update_tenant_button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/tenant_pending_dues"
+        app:layout_constraintTop_toBottomOf="@+id/fill_pending_dues" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
